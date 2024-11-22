@@ -31,21 +31,21 @@ unet50 = ResNetUNet50(resnet50)
 
 unet18.load_state_dict(
     torch.load(
-        "model_25_normalized.pt",
+        "/mount/src/global_dnn/prod/model_25_normalized.pt",
         weights_only=True,
     )
 )
 
 unet50_basic.load_state_dict(
     torch.load(
-        "model_50_res_35.pt",
+        "/mount/src/global_dnn/prod/model_50_res_35.pt",
         weights_only=True,
     )
 )
 
 unet50.load_state_dict(
     torch.load(
-        "model_50_res_60.pt",
+        "/mount/src/global_dnn/prod/model_50_res_60.pt",
         weights_only=True,
     )
 )
