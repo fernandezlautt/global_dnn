@@ -33,6 +33,7 @@ unet18.load_state_dict(
     torch.load(
         "/mount/src/global_dnn/prod/model_25_normalized.pt",
         weights_only=True,
+        map_location=torch.device("cpu") if not torch.cuda.is_available() else None,
     )
 )
 
@@ -40,6 +41,7 @@ unet50_basic.load_state_dict(
     torch.load(
         "/mount/src/global_dnn/prod/model_50_res_35.pt",
         weights_only=True,
+        map_location=torch.device("cpu") if not torch.cuda.is_available() else None,
     )
 )
 
@@ -47,6 +49,7 @@ unet50.load_state_dict(
     torch.load(
         "/mount/src/global_dnn/prod/model_50_res_60.pt",
         weights_only=True,
+        map_location=torch.device("cpu") if not torch.cuda.is_available() else None,
     )
 )
 
